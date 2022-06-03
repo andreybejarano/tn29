@@ -10,5 +10,17 @@
     {
         "titulo": "Break",
         "estado": "pendiente"
+    },
+    {
+        "titulo": "Titulo de la tarea",
+        "estado": "pendiente"
+    },
+    {
+        "titulo": "Titulo de la tarea 2",
+        "estado": "pendiente"
+    },
+    {
+        "titulo": "Titulo de la tarea 3",
+        "estado": "pendiente"
     }
 ]

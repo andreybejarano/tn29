@@ -4,13 +4,24 @@ const accion = process.argv[2];
 
 switch (accion) {
     case 'listar':
-        const tareas = funcTareas.listar();
+        const tareas = funcTareas.leerArchivo();
         console.log('Listado de tareas');
         console.log('-----------------');
-        for (let index = 0; index < tareas.length; index++) {
-            // console.log((index + 1) + '. ' + tareas[index].titulo + ' - ' + tareas[index].estado);
-            console.log(`${index + 1}. ${tareas[index].titulo} - ${tareas[index].estado}`);
-        }
+        tareas.forEach((tarea, index) => {
+            console.log(`${index + 1}. ${tarea.titulo} - ${tarea.estado}`);
+        });
+        break;
+    case 'crear':
+        console.log();    
+        console.log('Nueva tarea creada');
+        console.log('------------------');
+        const titulo = process.argv[3];
+        const tarea = {
+            titulo,
+            estado: "pendiente"
+        };
+        funcTareas.guardarTarea(tarea);
+        console.log(`${tarea.titulo} -> ${tarea.estado}`);
         break;
     case undefined:
         console.log('Atención - Tienes que pasar una acción.');
