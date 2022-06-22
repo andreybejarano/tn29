@@ -4,7 +4,7 @@ const path = require('path');
 const app = express();
 
 const pathPublic = path.resolve(__dirname, './public');
-app.use('/static', express.static(pathPublic));
+app.use(express.static(pathPublic));
 
 app.get('/', (req,res)=>{
     res.sendFile(__dirname + '/views/home.html');
