@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  background: red;
+  height: 500px;
+  width: 900px;
+}
+
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+  align-content: center;
+  justify-content: center;
+}
+.element {
+  height: 200px;
+  width: 200px;
+  font-size: 48px;
+}
+.box1 {
+  background-color: blue;
+}
+.box2 {
+  background-color: yellow;
+}
+.box3 {
+  background-color: green;
+}
+.box4 {
+  background-color: gray;
+}
