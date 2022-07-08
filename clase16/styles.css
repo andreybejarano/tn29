@@ -1,0 +1,61 @@
+.container {
+    background-color: gray;
+    margin-top: 50px;
+    position: relative;
+    height: 1000px;
+    width: 500px;
+}
+
+.box1,
+.box2,
+.box3{
+    width: 200px;
+    height: 200px;
+}
+
+.box1 {
+    left: 100px;
+    top: 100px;
+    position: relative;
+    background-color: red;
+    z-index: 1;
+}
+.box2 {
+    position: relative;
+    background-color: yellow;
+    z-index: 2;
+    transition: border-radius 1000ms cubic-bezier(0.35, 0.28, 0.6, 1.32);
+}
+
+.box2:hover {
+    border-radius: 50%;
+}
+
+.box3 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    background-color: blue;
+    animation: rotar 3s;
+}
+.box4 {
+    position: fixed;
+    background-color: green;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+}
+
+@keyframes rotar {
+    from {
+        width: 0;
+        height: 0;
+    }
+    to {
+        transform: rotate(360deg);
+        width: 200px;
+        height: 200px;
+    }
+}
