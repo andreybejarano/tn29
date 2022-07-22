@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pimienta & Sal</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <!-- Navbar (sit on top) -->
+    <%- include('partials/headerNavbar') %>
+
+    <!-- Header -->
+    <%- include('partials/headerMain') %>
+
+    <!-- Page content -->
+    <div class="ps-content">
+      <hr />
+      <!-- Menu Section -->
+      <div class="ps-row ps-padding-64" id="menu">
+        <div class="ps-col l6 ps-padding-large">
+          <h1 class="ps-center"><%= plato.titulo %></h1>
+          <br />
+          <h4><%= plato.descripcionCorta %></h4>
+          <p class="ps-text-grey">
+            <% if(plato.descripcionDetallada.length) {%> <%=
+            plato.descripcionDetallada %> <%} else { %> Plato típico <%} %>U$S
+            <%= plato.precio %>
+          </p>
+          <br />
+        </div>
+
+        <div class="ps-col l6 ps-padding-large ps-img-menu">
+          <img
+            src="/images/<%= plato.img %>"
+            class="ps-round ps-image ps-opacity-min"
+            alt="Menu"
+          />
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <%- include('partials/footer') %>
+    </div>
+  </body>
+</html>
