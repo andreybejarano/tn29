@@ -1,0 +1,49 @@
+Paso 1: Identificar los campos
+user_firstname
+user_lastname
+user_email
+user_password
+user_category
+course_title
+course_description
+course_image
+course_start_date
+course_end_date
+course_max_students
+unit_title
+unit_description
+unit_start_date
+
+Paso 2: Agrupar todos los campos segun entidad
+_______________________
+categories
+ - id
+ - name
+
+users
+  - id
+  - firstname
+  - lastname
+  - email
+  - password
+  - categories_id (FK)
+
+courses
+ - id
+ - title
+ - description
+ - image
+ - start_date
+ - end_date
+ - max_students
+
+courses_has_users
+ - users_id (FK)
+ - courses_id (FK)
+
+units
+ - id
+ - title
+ - description
+ - start_date
+ - courses_id (FK)
